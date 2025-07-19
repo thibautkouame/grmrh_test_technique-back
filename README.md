@@ -11,6 +11,7 @@ npm run start
 ```
 
 # Structure du projet
+<img width="347" height="465" alt="Image" src="https://github.com/user-attachments/assets/567d641a-b044-4320-afc5-472593a9ccbb" />
 
 # Technologies utilisées
 Node js, Express, MongoDB, MongoDB Atlas
