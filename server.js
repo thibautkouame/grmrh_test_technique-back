@@ -13,7 +13,7 @@ const app = express();
 
 // accepter les requêtes depuis des origines ?
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'http://localhost:3001',
   credentials: true
 }));
 
@@ -22,6 +22,11 @@ app.use(cors({
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 connectMongo();
+
+// Page d'accueil
+app.get('/', (req, res) => {
+  res.send('<h1>Route d\'accueil "test technique" de Thibaut Kouame"</h1>');
+});
 
 // Routes
 app.post('/grmr/users/create-account', createUser);
