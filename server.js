@@ -10,10 +10,12 @@ const path = require('path');
 dotenv.config();
 const app = express();
 
+// les orgines autorisées
+const origins = ['https://grmrh-test-technique-front.vercel.app', 'http://localhost:3000'];
 
-// accepter les requêtes depuis des origines ?
+// accepter les requêtes depuis des origines
 app.use(cors({
-  origin: 'http://localhost:3001',
+  origin: origins,
   credentials: true
 }));
 
@@ -33,8 +35,8 @@ app.post('/grmr/users/create-account', createUser);
 app.post('/grmr/users/login', loginUser);
 app.post('/grmr/admin/create-account', createAdmin);
 app.post('/grmr/admin/login', loginAdmin);
-app.post('/grmr/admin/create-user', createUserByAdmin); 
-app.get('/grmr/get-users', getUsers); 
+app.post('/grmr/admin/create-user', createUserByAdmin);
+app.get('/grmr/get-users', getUsers);
 app.delete('/grmr/admin/delete-user/:id', deleteUser);
 app.put('/grmr/users/update-user/:id', updateUser);
 app.get('/grmr/user/profile', getUser);
