@@ -13,6 +13,7 @@ npm run start
 # Structure du projet
 
 # Technologies utilisées
+Node js, Express, MongoDB, MongoDB Atlas
 
 # Capture d’écran
 
